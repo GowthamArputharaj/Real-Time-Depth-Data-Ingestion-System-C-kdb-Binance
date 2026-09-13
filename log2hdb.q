@@ -1,8 +1,8 @@
 / log2hdb.q
-/ Usage: q log2hdb.q -logFile log/tplog_2026.09.12 -hdbDir hdb
+/ Usage: q log2hdb.q -logFile log/tplog_2026.09.13 -hdbDir hdb
 
 / 1. Parse command line arguments
-args:.Q.def[enlist[`logFile]!enlist "log/tplog_2026.09.12"] .Q.opt .z.x;
+args:.Q.def[enlist[`logFile]!enlist "log/tplog_2026.09.13"] .Q.opt .z.x;
 logFile:hsym `$args`logFile;
 hdbDir:hsym `$"hdb";
 

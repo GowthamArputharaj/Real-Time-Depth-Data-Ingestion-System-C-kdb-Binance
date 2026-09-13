@@ -15,7 +15,9 @@ flush_to_disk:{[]
     intra_dir:hsym `$"intraday/",(string .z.D),"/depth/";
     
     / Enumerate symbols against the global sym file and APPEND (upsert) to disk
-    intra_dir upsert .Q.en[`:hdb] depth;
+    / intra_dir upsert .Q.en[`:hdb] depth;
+    intra_root:hsym `$"intraday";
+    intra_dir upsert .Q.en[intra_root] depth;
     
     rowCount: count depth;
     
@@ -25,7 +27,7 @@ flush_to_disk:{[]
     -1 (string .z.T)," - Flushed ",(string rowCount)," ticks to disk. Memory cleared.";
     }
 
-/ 4. Set kdb+ system timer to run every 30 seconds (30000 milliseconds)
+/ 4. Set kdb+ system timer to run every 05 seconds (05000 milliseconds)
 \t 5000
 .z.ts:{flush_to_disk[]}
 

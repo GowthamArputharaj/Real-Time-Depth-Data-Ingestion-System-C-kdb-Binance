@@ -1,8 +1,8 @@
 / replay.q
-/ Usage: q replay.q -logFile log/tplog_2026.09.09
+/ Usage: q replay.q -logFile log/tplog_2026.09.13
 
 / 1. Parse command line arguments
-args:.Q.def[enlist[`logFile]!enlist "log/tplog_2026.09.12"] .Q.opt .z.x;
+args:.Q.def[enlist[`logFile]!enlist "log/tplog_2026.09.13"] .Q.opt .z.x;
 logFile:hsym `$args`logFile;
 
 / 2. Define the exact physical schema layout matching the payload

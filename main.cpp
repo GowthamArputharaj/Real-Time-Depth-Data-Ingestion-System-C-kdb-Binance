@@ -1,6 +1,7 @@
 #include "include/websocket.hpp"
 #include <string>
 #include <iostream>
+#include "include/simdjson.h"
 #include "include/parser.hpp"
 #include "include/tickerplant.hpp"
 #include "include/symbols.hpp"
